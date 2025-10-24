@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAKEUP BY MARY LLC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background: linear-gradient(to bottom, #fff8f9, #ffe6ef, #fff);
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      text-shadow: 1px 2px 8px rgba(255, 192, 203, 0.6);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1.2s ease, transform 1.2s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gold-line {
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(to right, #f6d365, #fda085);
+      margin: 1.5rem auto;
+      border-radius: 10px;
+    }
+
+    .sparkle-bg {
+      background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.5) 0%, transparent 40%),
+        radial-gradient(circle at 80% 40%, rgba(255, 255, 255, 0.4) 0%, transparent 40%),
+        linear-gradient(to bottom, #ffd6e0, #fff);
+    }
+  </style>
+</head>
+
+<body class="text-gray-800">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div
+      class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4 bg-white/80 backdrop-blur-md shadow-sm rounded-b-2xl">
+      <h3 class="text-pink-700 font-semibold text-lg tracking-wide">MAKEUP BY MARY</h3>
+
+      <!-- Desktop menu -->
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="#about" class="hover:text-pink-700 transition-colors">About</a>
+        <a href="#gallery" class="hover:text-pink-700 transition-colors">Gallery</a>
+        <a href="#services" class="hover:text-pink-700 transition-colors">Services</a>
+        <a href="#testimonials" class="hover:text-pink-700 transition-colors">Testimonials</a>
+        <a href="#contact" class="hover:text-pink-700 transition-colors">Contact</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden text-pink-700 focus:outline-none" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div id="mobileMenu" class="hidden flex flex-col items-center bg-white/95 backdrop-blur-md shadow-md md:hidden">
+      <a href="#about" class="py-3 w-full text-center hover:bg-pink-50 text-pink-700">About</a>
+      <a href="#gallery" class="py-3 w-full text-center hover:bg-pink-50 text-pink-700">Gallery</a>
+      <a href="#services" class="py-3 w-full text-center hover:bg-pink-50 text-pink-700">Services</a>
+      <a href="#testimonials" class="py-3 w-full text-center hover:bg-pink-50 text-pink-700">Testimonials</a>
+      <a href="#contact" class="py-3 w-full text-center hover:bg-pink-50 text-pink-700">Contact</a>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="relative text-center py-36 fade-in mt-16 overflow-hidden" style="background-image: url('https://cdn.pixabay.com/photo/2016/07/26/16/48/cosmetics-1543276_1280.jpg'); 
+         background-repeat: no-repeat; 
+         background-size: cover; 
+         background-position: center;">
+
+    <!-- Blurred overlay -->
+    <div class="absolute inset-0 bg-pink-100/40 backdrop-blur-sm"></div>
+
+    <!-- Hero content -->
+    <div class="relative z-10">
+      <h1 class="text-6xl md:text-7xl font-bold text-pink-800 mb-6 drop-shadow-lg">MAKEUP BY MARY LLC</h1>
+      <p class="text-xl text-gray-800 italic mb-8">Where elegance meets artistry</p>
+      <a href="#contact"
+        class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-full shadow-lg text-lg transition">
+        Book Your Appointment
+      </a>
+    </div>
+  </section>
+
+
+  <!-- About -->
+  <section id="about" class="max-w-3xl mx-auto px-6 py-20 text-center fade-in">
+    <h2 class="text-4xl font-semibold text-pink-700 mb-4">About Mary</h2>
+    <div class="gold-line"></div>
+    <p class="text-gray-700 leading-relaxed text-lg">
+      <strong>Makeup by Mary</strong> is a luxury beauty brand built on elegance and confidence. Mary’s artistry
+      enhances your natural beauty with precision and grace — ensuring you look and feel radiant on every occasion.
+    </p>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="bg-gradient-to-b from-pink-50 to-pink-100 py-20 shadow-inner fade-in">
+    <h2 class="text-4xl font-semibold text-center text-pink-700 mb-10">Gallery</h2>
+    <div class="gold-line"></div>
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <img src="https://cdn.pixabay.com/photo/2020/05/22/18/01/brush-5206399_1280.jpg"
+        class="rounded-2xl shadow-md hover:scale-105 transition-transform duration-500">
+      <img src="https://cdn.pixabay.com/photo/2014/02/05/16/38/eye-shadow-259176_1280.jpg"
+        class="rounded-2xl shadow-md hover:scale-105 transition-transform duration-500">
+      <img src="https://cdn.pixabay.com/photo/2017/01/19/04/38/cosmetics-1991530_1280.jpg"
+        class="rounded-2xl shadow-md hover:scale-105 transition-transform duration-500">
+      <img src="https://cdn.pixabay.com/photo/2016/07/13/09/56/makeup-1514026_1280.jpg"
+        class="rounded-2xl shadow-md hover:scale-105 transition-transform duration-500">
+      <img src="https://cdn.pixabay.com/photo/2024/11/29/06/47/ai-generated-9232247_1280.jpg"
+        class="rounded-2xl shadow-md hover:scale-105 transition-transform duration-500">
+      <img src="https://cdn.pixabay.com/photo/2020/04/02/05/19/beauty-4993471_1280.jpg"
+        class="rounded-2xl shadow-md hover:scale-105 transition-transform duration-500">
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="max-w-5xl mx-auto px-6 py-20 text-center fade-in">
+    <h2 class="text-4xl font-semibold text-pink-700 mb-10">Services</h2>
+    <div class="gold-line"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="bg-pink-100 rounded-2xl p-10 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-pink-700 mb-3">Bridal Makeup</h3>
+        <p class="text-gray-700 text-lg">Flawless, radiant, and long-lasting looks for your wedding day — designed to
+          make you glow.</p>
+      </div>
+      <div class="bg-pink-100 rounded-2xl p-10 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-pink-700 mb-3">Event Glam</h3>
+        <p class="text-gray-700 text-lg">Sophisticated and statement looks for galas, shoots, and special evenings.</p>
+      </div>
+      <div class="bg-pink-100 rounded-2xl p-10 shadow-sm hover:shadow-xl transition transform hover:-translate-y-1">
+        <h3 class="text-2xl font-semibold text-pink-700 mb-3">Makeup Lessons</h3>
+        <p class="text-gray-700 text-lg">Learn Mary’s expert techniques in a one-on-one session tailored to your goals.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="bg-gradient-to-b from-pink-100 to-white py-20 fade-in">
+    <h2 class="text-4xl font-semibold text-center text-pink-700 mb-10">Testimonials</h2>
+    <div class="gold-line"></div>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-6 text-center">
+      <div class="bg-white p-8 rounded-2xl shadow-md border border-pink-100">
+        <p class="italic text-gray-600">“Mary made me feel like the most beautiful version of myself. My bridal look was
+          everything I dreamed of!”</p>
+        <h4 class="mt-4 text-pink-700 font-semibold">— Sarah J.</h4>
+      </div>
+      <div class="bg-white p-8 rounded-2xl shadow-md border border-pink-100">
+        <p class="italic text-gray-600">“Her attention to detail and artistry is unmatched. I’ll never go to anyone else
+          for events.”</p>
+        <h4 class="mt-4 text-pink-700 font-semibold">— Emily R.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gradient-to-b from-pink-50 to-pink-100 py-20 shadow-inner fade-in">
+    <h2 class="text-4xl font-semibold text-center text-pink-700 mb-8">Contact</h2>
+    <div class="gold-line"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-gray-700 mb-2 text-lg">Phone: +14054535244</p>
+      <p class="text-gray-700 mb-2 text-lg">Email: <a href="mailto:info@makeupbymary.beauty"
+          class="text-pink-700 underline">info@makeupbymary.beauty</a></p>
+      <p class="text-gray-700 mb-8 text-lg">Address: 5000 Corner Brook Ln, Edmond, OK 73034, USA</p>
+      <div class="rounded-2xl overflow-hidden shadow-lg border border-pink-200">
+        <iframe src="https://www.google.com/maps?q=5000+Corner+Brook+Ln,+Edmond,+OK+73034,+USA&output=embed"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-8 text-gray-500 text-sm bg-gradient-to-r from-white via-pink-50 to-white fade-in">
+    © <span id="year"></span> MAKEUP BY MARY LLC — All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // fade-in animation
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Mobile nav toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Shrink nav on scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        navbar.classList.add('shadow-lg', 'bg-white/90');
+      } else {
+        navbar.classList.remove('shadow-lg', 'bg-white/90');
+      }
+    });
+
+  </script>
+</body>
+
+</html>
